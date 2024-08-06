@@ -10,6 +10,13 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="{{ route('articles.index') }}">Articles</a></li>
+        </ul>
+    </nav>
+</header>
 <div class="container mt-4">
     <h1>@yield('header')</h1>
     <div>
