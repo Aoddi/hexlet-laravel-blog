@@ -37,6 +37,7 @@ class ArticleController extends Controller
         $article->save();
 
         return redirect()
-            ->route('articles.index');
+            ->route('articles.index')
+            ->with('status', 'Article created!');
     }
 }
