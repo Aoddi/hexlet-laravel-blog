@@ -12,6 +12,7 @@
     @foreach ($articles as $article)
         <h3><a href="{{ route('articles.show', $article->id) }}">{{$article->name}}</a></h3>
         <div>{{Str::limit($article->body, 200)}}</div>
+        <a href="{{ route('articles.destroy', $article->id) }}" data-confirm="Вы уверены?" data-method="delete" rel="nofollow">Удалить</a>
     @endforeach
 
     {{ $articles->links() }}
